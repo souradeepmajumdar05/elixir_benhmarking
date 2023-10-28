@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    case_1000
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.14.0</li>
+    <li>Erlang: 25.0</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 15.40 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">generate_list_enum Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for generate_list_enum.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">generate_list_enum</td>
+        
+        
+          <td>0.0446 K</td>
+          <td>22.42 ms</td>
+          <td>±34.46%</td>
+          <td>27.02 ms</td>
+          <td>none</td>
+          <td>12.48 ms</td>
+          <td>34.72 ms</td>
+        
+        <td>224</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.1.0 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"generate_list_enum","job_name":"generate_list_enum","input_name":"case_1000","run_time_data":{"statistics":{"absolute_difference":22250397.12566114,"average":22420205.38839286,"ips":44.60262440404355,"maximum":34723358,"median":27017937.5,"minimum":12479032,"mode":null,"percentiles":{"50":27017937.5,"99":32994803.5},"relative_less":0.007573894163326087,"relative_more":132.03247608636354,"sample_size":224,"std_dev":7725027.943938397,"std_dev_ips":15.368125042806481,"std_dev_ratio":0.3445565198942251},"samples":[27048421,27257051,27061679,29954212,27953020,29818761,27585524,28571158,27285496,29716392,28200625,28627750,28298680,26884529,27270823,27004249,26835497,27180285,26943193,27147210,27228050,26951454,27103417,27143386,26895990,27072770,26967722,28704103,27239506,27231885,27031203,28072482,32571401,29495819,27487282,32142624,28779493,29562768,27626163,28331563,27659791,27481536,27452244,29789184,29166980,32651133,31078407,32154389,30176709,30124795,28815959,31095599,30426171,30604835,30000827,31261314,29116634,29818453,29317824,32609976,26931438,27058081,27051946,26841533,27269829,28979216,26854691,27287191,27326325,26679433,26906509,31818523,27225859,32885071,27413091,32381387,27057834,29433737,30771348,30437847,32226576,28282787,26888934,27703759,27463307,27004672,28539786,28463541,28789360,27731303,27625175,27829238,26952624,27112325,27599322,28162794,27340538,28398807,28074572,27659261,27624900,28219083,34723358,27167179,27116193,27369229,27377437,29886716,27002049,27531688,28450329,22822741,13490528,12601725,12903680,13399291,13399389,15849158,12588689,14905504,15341622,14186635,13499190,13473816,12555038,12667257,12738149,12752281,12583912,12562062,12572296,13780640,14064182,13250085,12669464,12546028,12534202,12954904,13222711,12654766,12599640,12580646,12520228,12885542,12997829,12831847,12592347,12544881,12545848,12735730,13022050,12639203,12581501,12570546,12543545,12826238,12579352,12561463,12589021,12517440,12522854,12732064,13385176,12947766,12628169,12554978,13325090,13508899,12531914,12816975,12696825,12520196,12479032,12807323,13125072,12812350,12742885,12963881,12915368,12856434,15177259,13453539,12853184,12600406,13083642,13481401,12686615,12692367,12598225,12591304,12639364,12595677,13169502,12546919,12621673,12510750,13124240,18475186,13328423,14755568,20603827,31209114,30871506,29071802,29330524,29184471,31889704,33031381,29894444,32345894,31592604,29922050,28548264,26956768,27000366,26868688,29277268,27148821,26795013,27113434,26895592,26882968,27916235,28067805]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null};
+
+      var inputHeadline = " (case_1000)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+    </script>
+  </body>
+</html>
